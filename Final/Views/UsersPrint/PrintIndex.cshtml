@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Final.Models.User>
+@{ Layout = null; }
+<!DOCTYPE html>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 style="color:darkviolet; font: bold 15pt Comic Sans MS; text-align: center; ">Список пользователей </h2>
+<table style="border: 1px; text-align: center; font: 12pt Arial, Verdana; width: 90%;">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Login)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PassHash)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LName)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Login)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PassHash)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LName)
+            </td>
+           
+        </tr>
+    }
+
+</table>

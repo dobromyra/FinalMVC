@@ -1,0 +1,13 @@
+﻿@model Final.Models.User
+
+@{ Layout = null; }
+
+<!DOCTYPE html>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 style="color: #15b90e">Привет, @Html.DisplayFor(model => model.Login)</h2>
+<p style="color: #0094ff">Мы очень рады тебя видеть в нашем приложении.</p>
+<p style="color: #a025ea; font-weight: bold; ">Это хэш твоего пароля: @Html.DisplayFor(model => model.PassHash)</p>
